@@ -56,5 +56,18 @@ document.getElementById('spooky').addEventListener('click', () => {
         document.getElementById('RandomJoke').textContent = data.joke || data.setup +" ... "+ data.delivery;
     })
 
-    document.getElementById('PageTitle').textContent = "A Sppoky Joke!"; 
+    document.getElementById('PageTitle').textContent = "A Spooky Joke!"; 
+})
+
+//Christmas
+
+document.getElementById('christmas').addEventListener('click', () => {
+    fetch('https://v2.jokeapi.dev/joke/Christmas?safe-mode')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        document.getElementById('RandomJoke').textContent = data.joke || data.setup +" ... "+ data.delivery;
+    })
+
+    document.getElementById('PageTitle').textContent = "A Christmas Joke!"; 
 })
