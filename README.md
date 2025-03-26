@@ -1,3 +1,3 @@
-##Attributions
+Attributions
 
 All work is original.
