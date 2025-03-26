@@ -32,3 +32,16 @@ document.getElementById('misc').addEventListener('click', () => {
 
     document.getElementById('PageTitle').textContent = "A Random Joke!"; 
 })
+
+//Pun
+
+document.getElementById('pun').addEventListener('click', () => {
+    fetch('https://v2.jokeapi.dev/joke/Pun?safe-mode')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        document.getElementById('RandomJoke').textContent = data.joke || data.setup +" ... "+ data.delivery;
+    })
+
+    document.getElementById('PageTitle').textContent = "A New Pun!"; 
+})
